@@ -1,38 +1,176 @@
-.App {
-  text-align: center;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.big-container {
+  width: 80vw;
+  margin: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  background-color: dodgerblue;
+  color: white;
+  display: block;
+  margin: auto;
+  width: 100%;
+  cursor: pointer;
+  font-weight: 600;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+
+  outline: 2px solid rgb(222, 220, 220);
+  padding: 5px;
+  border-radius: 5px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+.prod-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 10px;
+  row-gap: 50px;
+
+
+}
+
+
+
+.product {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 10px;
+  justify-content: space-between;
+
+  border: none;
+  box-shadow: 0px 0px 5px grey;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+
+img {
+  width: 100%;
+  height: 200px;
+  border-radius: 5px;
+
+}
+
+.prod_info {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+
+
+@media (max-width:800px) {
+
+
+  .prod-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+
+}
+
+@media (max-width:600px) {
+
+
+  .prod-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width:400px) {
+
+
+
+  .big-container {
+    width: 95vw;
+    margin: auto;
+  }
+}
+
+
+
+.checkout {
+  display: flex !important;
+  flex-flow: column wrap;
+  width: 25%;
+  background-color: black;
   color: white;
+  height: fit-content;
+  border-radius: 5px;
+
 }
 
-.App-link {
-  color: #61dafb;
+.checkout>div:first-child {
+  text-align: center;
+  margin: 20px 0px;
+  font-size: 17px;
+  font-weight: 700;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.checkout .row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 7px 10px;
+
+}
+
+.last-row {
+  display: flex;
+  flex-flow: row wrap;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+  justify-content: space-between;
+  padding: 15px 5px;
+  font-size: 17px;
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+#chechoutbtn {
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 20px;
+  padding: 10px 0px;
+  background-color: white;
+  color: black;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  cursor: pointer;
+  transition-duration: 1s;
+}
+
+#chechoutbtn:hover {
+  transform: scaleX(1.1);
 }
